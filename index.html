@@ -28,7 +28,7 @@
   --glow-pink:#5A2B57; --glow-lilac:#2E2C6E; --chip:#1E2046; color-scheme:dark}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--display);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 img{max-width:100%;display:block}
@@ -251,6 +251,59 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
 .lb.on img{transform:none}
 .lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));border:0;background:#fff;color:#111;font:700 13px var(--display);padding:10px 16px;border-radius:30px;cursor:pointer}
 
+
+/* phone: full screen layers */
+@media (max-width:820px){
+  html{scroll-snap-type:y proximity}
+  .hero,.opener,.contact{min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start}
+  .hero>.wrap,.opener>.wrap,.contact>.wrap{width:100%}
+  .hero{padding-block:84px 48px}
+  .hero .panel{padding:72px 16px;margin-top:40px}
+  .word{font-size:19vw}
+  .hero-sub{font-size:19px}
+  .opener{padding-block:90px 60px}
+  .opener .num{font-size:30vw}
+  .opener .panel{padding:56px 14px}
+  .opener .big{font-size:12.5vw!important}
+  .opener .desc{font-size:16px}
+  section.page{padding-block:72px}
+  .proj{scroll-margin-top:70px}
+  .phead h3{font-size:44px}
+  .hero-img{aspect-ratio:4/3.4}
+  .photo{margin-inline:auto;width:100%}
+  .marq{scroll-snap-align:none}
+}
+
+
+.btn.wa{background:#25D366;color:#073B1F}
+.btn.wa:hover{background:#3BE07A}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:80;display:flex;align-items:center;gap:10px;text-decoration:none;background:#25D366;color:#073B1F;font:800 14px var(--display);padding:14px 18px;border-radius:40px;box-shadow:0 14px 34px rgba(7,59,31,.35);transition:transform .3s}
+.fab:hover{transform:translateY(-3px) scale(1.03)}
+.fab::before{content:"";position:absolute;inset:0;border-radius:40px;border:2px solid #25D366;animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.8}to{transform:scale(1.35);opacity:0}}
+@media (max-width:520px){.fab span{display:none}.fab{padding:16px}}
+.reach .btn{padding:16px 22px}
+
+
+/* phone: images as heroes, edge to edge */
+@media (max-width:820px){
+  .hero-img:not([style*="1280"]),.logos .fig,.row3 .fig,.duo .fig,.mw .fig,.wide,.panels .fig,.single .fig,.fig.contain.rv{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)!important;margin-right:0;border-radius:0}
+  .hero-img:not([style*="1280"]){aspect-ratio:4/5}
+  .logos{grid-template-columns:1fr;gap:10px}
+  .logos .fig,.logos .fig:first-child,.logos .fig:last-child{grid-column:auto!important;aspect-ratio:16/11!important}
+  .row3,.duo{grid-template-columns:1fr;gap:10px}
+  .row3 .fig:last-child{grid-column:auto}
+  .row3 .fig,.duo .fig{aspect-ratio:4/5}
+  .row3 .fig.contain{aspect-ratio:4/3}
+  .mw{grid-template-columns:1fr;gap:10px}
+  .mw .fig,.mw .fig:first-child{aspect-ratio:4/5;grid-row:auto}
+  .rail .fig{flex-basis:82vw}
+  .pats{gap:10px}
+  .panels{gap:28px}
+  .cap,.panels .cap{padding-inline:2px}
+  .swatch span{height:56px}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv.pre{opacity:1;transform:none}
@@ -278,7 +331,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
     <div class="panel glass">
       <h1 class="word" aria-label="Portfolio."><span style="animation-delay:.05s">P</span><span style="animation-delay:.1s">o</span><span style="animation-delay:.15s">r</span><span style="animation-delay:.2s">t</span><span style="animation-delay:.25s">f</span><span style="animation-delay:.3s">o</span><span style="animation-delay:.35s">l</span><span style="animation-delay:.4s">i</span><span style="animation-delay:.45s">o</span><span class="dot" style="animation-delay:.6s">.</span></h1>
       <p class="hero-sub">Shehroz Ahmad, Graphic Designer</p>
-      <div class="hero-cta"><a class="btn solid" href="#branding">See the work</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+      <div class="hero-cta"><a class="btn solid" href="#branding">See the work</a><a class="btn wa" href="https://wa.me/923262942760?text=Hi%20Shehroz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 1.9 1.4 3.9 3.3 5.2 1 .7 2 .9 2.6.9l.9-1.3-1.7-1-.9.7c-.8-.4-1.7-1.3-2.1-2.1l.7-.9-1-1.7-1.3.9z" fill="currentColor" stroke="none"/></svg>WhatsApp me</a><a class="btn ghost" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener">Adobe Stock</a></div>
     </div>
   </div>
 </header>
@@ -534,13 +587,16 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
       <a class="qr glass rv s" href="https://www.behance.net/shehrozahmad8" target="_blank" rel="noopener"><div class="code"><img src="assets/qr_behance.png" alt="QR code for Behance"></div><small>SCAN TO VIEW</small><b>Behance</b><em>behance.net/shehrozahmad8</em></a>
       <a class="qr glass rv s" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener"><div class="code"><img src="assets/qr_adobe.png" alt="QR code for Adobe Stock"></div><small>SCAN TO VIEW</small><b>Adobe Stock</b><em>Graphics Bazaar on Adobe Stock</em></a>
     </div>
-    <div class="reach">
+    <div class="reach"><a class="btn wa" href="https://wa.me/923262942760?text=Hi%20Shehroz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 1.9 1.4 3.9 3.3 5.2 1 .7 2 .9 2.6.9l.9-1.3-1.7-1-.9.7c-.8-.4-1.7-1.3-2.1-2.1l.7-.9-1-1.7-1.3.9z" fill="currentColor" stroke="none"/></svg>Chat on WhatsApp</a><a class="btn solid" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener">Adobe Stock portfolio</a><a class="btn ghost" href="https://www.behance.net/shehrozahmad8" target="_blank" rel="noopener">Behance</a></div>
+    <div class="reach" style="margin-top:14px">
       <div class="copy"><span id="em">shehrozahmad1055@gmail.com</span><button type="button" data-copy="em">Copy</button></div>
       <div class="copy"><span id="ph">+92 326 2942760</span><button type="button" data-copy="ph">Copy</button></div>
     </div>
     <div class="foot"><span>Shehroz Ahmad, Graphic Designer</span><span>Portfolio 2026</span></div>
   </div>
 </footer>
+
+<a class="fab" href="https://wa.me/923262942760?text=Hi%20Shehroz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 1.9 1.4 3.9 3.3 5.2 1 .7 2 .9 2.6.9l.9-1.3-1.7-1-.9.7c-.8-.4-1.7-1.3-2.1-2.1l.7-.9-1-1.7-1.3.9z" fill="currentColor" stroke="none"/></svg><span>WhatsApp</span></a>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><button type="button" id="lbClose">Close</button><img id="lbImg" alt=""></div>
 
