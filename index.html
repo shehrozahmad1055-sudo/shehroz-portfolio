@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shehroz Ahmad, graphic designer in Lahore. Branding, packaging, thumbnails, social media, AI creatives and vector art.">
+<title>Shehroz Ahmad Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Montserrat:wght@800;900&family=Playfair+Display:ital@1&display=swap">
+<style>
+/* Layout: the printed book as a scrolling site. Light reading pages, dark indigo section openers, glass panels. */
+:root{
+  --bg:#F8F7FC; --surface:#FFFFFF; --ink:#23245C; --ink-soft:#6B6D8F; --accent:#3B3FA0; --line:#DCDBF0;
+  --glow-pink:#F5B8D9; --glow-lilac:#C9C6F5; --chip:#FFFFFF;
+  --deep-1:#1A1A47; --deep-2:#2E3192; --deep-3:#6E6BD8; --on-deep:#FFFFFF; --deep-accent:#B9B6FF;
+  --display:"Urbanist",ui-sans-serif,system-ui,sans-serif;
+  --heavy:"Montserrat","Arial Black",ui-sans-serif,sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+  --r:22px; --gut:max(16px,env(safe-area-inset-left,0px));
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1026; --surface:#181A3A; --ink:#ECEBFA; --ink-soft:#A9A9CC; --accent:#9C98FF; --line:#2C2E5A;
+  --glow-pink:#5A2B57; --glow-lilac:#2E2C6E; --chip:#1E2046; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1026; --surface:#181A3A; --ink:#ECEBFA; --ink-soft:#A9A9CC; --accent:#9C98FF; --line:#2C2E5A;
+  --glow-pink:#5A2B57; --glow-lilac:#2E2C6E; --chip:#1E2046; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--display);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.lab{font:700 12px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--ink-soft)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* progress + nav */
+.prog{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--deep-2),var(--deep-3),var(--glow-pink));z-index:70}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.mark{font:800 26px/1 var(--display);letter-spacing:-.04em;text-decoration:none}
+.mark span{color:var(--accent)}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{text-decoration:none;font:600 13px/1 var(--display);padding:9px 12px;border-radius:30px;color:var(--ink-soft);transition:background .25s,color .25s}
+.links a:hover,.links a.on{background:var(--surface);color:var(--ink);box-shadow:0 2px 10px rgba(30,30,90,.08)}
+.menu{display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 13px var(--display);padding:9px 14px;border-radius:30px;cursor:pointer}
+@media (max-width:900px){
+  .menu{display:block}
+  .links{position:absolute;left:0;right:0;top:62px;flex-direction:column;padding:10px max(20px,env(safe-area-inset-left,0px)) 18px;background:var(--bg);border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;pointer-events:none;transition:.3s}
+  .links.open{transform:none;opacity:1;pointer-events:auto}
+  .links a{font-size:16px;padding:12px 14px}
+}
+
+/* deep bands */
+.deep{position:relative;overflow:hidden;color:var(--on-deep);background:linear-gradient(160deg,var(--deep-1) 0%,var(--deep-2) 55%,var(--deep-3) 100%)}
+.deep .lab{color:var(--deep-accent)}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.2),rgba(255,255,255,.06));border:1.5px solid rgba(255,255,255,.42);box-shadow:0 30px 70px rgba(10,10,40,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* hero */
+.hero{padding-block:clamp(70px,12vw,150px) clamp(60px,9vw,120px)}
+.hero .o1{width:520px;height:520px;right:-140px;top:-160px;background:#8F8BFF;opacity:.5;animation:drift 14s ease-in-out infinite alternate}
+.hero .o2{width:460px;height:460px;left:-160px;bottom:-200px;background:var(--glow-pink);opacity:.35;animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.12)}}
+.hero-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.panel{margin-top:clamp(36px,6vw,64px);border-radius:clamp(26px,4vw,44px);padding:clamp(34px,7vw,80px) clamp(18px,4vw,40px);text-align:center;position:relative}
+.word{font:800 clamp(64px,15vw,196px)/.95 var(--display);letter-spacing:-.04em;display:inline-flex;text-shadow:0 10px 40px rgba(0,0,0,.25)}
+.word span{display:inline-block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.word .dot{color:var(--deep-accent)}
+@keyframes rise{from{transform:translateY(.35em);opacity:.0}to{transform:none;opacity:1}}
+.hero-sub{margin-top:18px;font:300 clamp(17px,2.4vw,24px)/1.4 var(--display);opacity:.9}
+.hero-cta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:700 14px/1 var(--display);padding:14px 22px;border-radius:40px;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:#fff;color:var(--deep-1)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+/* marquee */
+.marq{overflow:hidden;border-block:1px solid var(--line);background:var(--surface)}
+.marq-in{display:flex;gap:44px;width:max-content;padding-block:18px;animation:marq 32s linear infinite}
+.marq span{font:900 clamp(20px,3vw,30px)/1 var(--heavy);letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.marq i{font-style:normal;color:var(--accent)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section.page{position:relative;padding-block:clamp(70px,10vw,130px)}
+.glowbg{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.glowbg .orb.a{width:520px;height:520px;right:-180px;top:-120px;background:var(--glow-pink);opacity:.45}
+.glowbg .orb.b{width:480px;height:480px;left:-200px;bottom:-160px;background:var(--glow-lilac);opacity:.5}
+.h2{font:800 clamp(44px,7vw,92px)/.95 var(--display);letter-spacing:-.035em;margin-top:14px}
+.h2 em{font:300 1em/1 var(--display);font-style:normal}
+.lede{max-width:62ch;margin-top:18px;color:var(--ink-soft);font-size:clamp(16px,1.6vw,18px)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,64px);align-items:end;margin-top:40px}
+.photo{position:relative;aspect-ratio:3/4.1;max-width:100%}
+.photo .card{position:absolute;left:0;right:0;bottom:0;top:22%;border-radius:30px;background:linear-gradient(160deg,var(--deep-1),var(--deep-2) 55%,var(--deep-3))}
+.photo .clip{position:absolute;inset:0;clip-path:inset(0 0 0 0 round 0 0 30px 30px);overflow:hidden}
+.photo img{position:absolute;left:50%;bottom:0;height:100%;max-width:none;transform:translateX(-50%) translateY(var(--py,0px));transition:transform .2s linear}
+.iam{font:italic 400 clamp(28px,3.5vw,40px)/1 var(--serif);color:var(--accent)}
+.name{font:800 clamp(48px,6.5vw,80px)/.98 var(--display);letter-spacing:-.025em;margin-top:6px}
+.name span{font-weight:300}
+.cv{margin-top:28px;border-top:1px solid var(--line)}
+.cv div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cv b{font:700 11.5px/1.6 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--chip);border:1px solid var(--line);border-radius:30px;padding:5px 13px;font:600 13.5px/1.4 var(--display)}
+@media (max-width:820px){.about{grid-template-columns:1fr}.photo{max-width:440px}}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:40px}
+.tile{position:relative;overflow:hidden;border-radius:26px;padding:28px;background:var(--surface);border:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.tile:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(30,30,90,.14)}
+.tile .n{position:absolute;left:28px;top:26px;font:900 15px var(--heavy);color:var(--accent)}
+.tile h3{font:800 clamp(22px,2.4vw,30px)/1.05 var(--display);position:relative}
+.tile p{color:var(--ink-soft);margin-top:8px;font-size:14.5px;position:relative;max-width:34ch}
+.tile svg{position:absolute;right:-18px;bottom:-24px;width:52%;max-width:220px;color:var(--accent);opacity:.12;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.tile:hover svg{transform:rotate(-8deg) scale(1.08)}
+.tile.big{grid-column:span 3;grid-row:span 2;min-height:460px;background:linear-gradient(160deg,var(--deep-1),var(--deep-2) 55%,var(--deep-3));color:#fff;border:0}
+.tile.big .n{color:#fff;font-size:38px}
+.tile.big p{color:rgba(255,255,255,.85);font-size:16px}
+.tile.big svg{color:#fff;opacity:.18}
+.tile.big h3{font-size:clamp(34px,4.5vw,56px)}
+.t-a{grid-column:span 3}.t-b{grid-column:span 3}.t-c{grid-column:span 2}.t-d{grid-column:span 4}
+@media (max-width:820px){.bento{grid-template-columns:1fr 1fr}.tile.big,.t-a,.t-b,.t-d{grid-column:span 2}.t-c{grid-column:span 2}.tile.big{min-height:340px;grid-row:auto}}
+
+/* openers */
+.opener{padding-block:clamp(70px,11vw,140px)}
+.opener .num{font:900 clamp(90px,16vw,190px)/.85 var(--heavy);letter-spacing:-.03em}
+.opener .panel{margin-top:clamp(30px,5vw,50px);text-align:center}
+.opener .big{font:900 clamp(40px,9.5vw,120px)/1 var(--heavy);letter-spacing:-.01em;text-shadow:0 7px 0 rgba(30,30,90,.35),0 16px 30px rgba(0,0,0,.25)}
+.opener .tags{margin-top:18px;font:600 12px var(--display);letter-spacing:.24em;opacity:.85;display:flex;justify-content:center;gap:10px 26px;flex-wrap:wrap}
+.opener .desc{max-width:52ch;margin-top:34px;opacity:.85}
+.opener .o1{width:520px;height:520px;right:-140px;top:-120px;background:#8F8BFF;opacity:.45}
+
+/* project blocks */
+.proj{margin-top:clamp(56px,8vw,96px)}
+.proj:first-child{margin-top:0}
+.phead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.phead h3{font:800 clamp(40px,6vw,76px)/1 var(--display);letter-spacing:-.03em}
+.phead .sub{font:300 clamp(18px,2.2vw,26px)/1.3 var(--display);margin-top:6px}
+.phead .count{font:900 clamp(28px,3.5vw,40px) var(--heavy);color:var(--accent)}
+.phead .count small{font:700 15px var(--display);color:var(--ink-soft)}
+.fig{position:relative;overflow:hidden;border-radius:var(--r);background:var(--surface);cursor:zoom-in}
+.fig img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.fig:hover img{transform:scale(1.04)}
+.fig.contain img{object-fit:contain}
+.fig.contain:hover img{transform:scale(1.02)}
+.hero-img{margin-top:26px;aspect-ratio:16/9.6}
+.bi{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin-top:28px}
+.bi p{color:var(--ink-soft);margin-top:10px}
+.swatch{display:flex;gap:8px;margin-top:26px}
+.swatch span{flex:1;height:46px;border-radius:12px;transition:flex .4s}
+.swatch span:hover{flex:1.8}
+.row3{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:14px;margin-top:14px}
+.row3 .fig{aspect-ratio:4/3.3}
+.meta{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:22px;font:600 14px var(--display)}
+.meta b{display:block;font:700 10.5px/1.8 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+@media (max-width:760px){.bi{grid-template-columns:1fr}.row3{grid-template-columns:1fr 1fr}.row3 .fig:last-child{grid-column:span 2}}
+
+/* logo grid */
+.logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.logos .fig{aspect-ratio:16/10}
+.logos .fig:first-child{grid-column:span 3;aspect-ratio:21/8}
+@media (max-width:640px){.logos{grid-template-columns:1fr 1fr}.logos .fig:first-child{grid-column:span 2}}
+.wide{margin-top:26px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.duo .fig{aspect-ratio:4/3}
+
+/* thumbnails */
+.thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.thumbs .fig{aspect-ratio:1280/769}
+@media (max-width:640px){.thumbs{grid-template-columns:1fr}}
+
+/* social panels */
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;align-items:start}
+.panels .fig{border-radius:28px;background:transparent}
+.cap{margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cap b{font:800 20px var(--display)}
+.single{max-width:860px;margin:30px auto 0}
+@media (max-width:760px){.panels{grid-template-columns:1fr}}
+
+/* AI */
+.mw{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:14px;margin-top:26px}
+.mw .fig:first-child{grid-row:span 2;aspect-ratio:auto;min-height:100%}
+.mw .fig{aspect-ratio:16/9}
+@media (max-width:760px){.mw{grid-template-columns:1fr}.mw .fig:first-child{grid-row:auto;aspect-ratio:16/9}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:26px;padding-bottom:14px;scrollbar-width:thin;cursor:grab}
+.rail:active{cursor:grabbing}
+.rail .fig{flex:0 0 clamp(220px,26vw,300px);aspect-ratio:4/5;scroll-snap-align:start}
+.hint{font:600 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* patterns */
+.pats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:26px}
+.pat{position:relative;aspect-ratio:1;border-radius:18px;overflow:hidden;background-size:52%;background-repeat:repeat;transition:background-size 1.2s cubic-bezier(.2,.8,.2,1),transform .4s}
+.pat:hover{background-size:30%;transform:translateY(-4px)}
+.pat span{position:absolute;left:10px;bottom:10px;background:var(--surface);color:var(--ink);font:700 12px var(--display);padding:6px 10px;border-radius:20px}
+@media (max-width:760px){.pats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.uses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:22px}
+.uses span{border-top:1px solid var(--line);padding-top:10px;font:600 14.5px var(--display)}
+.uses i{font:900 12px var(--heavy);font-style:normal;color:var(--accent);margin-right:8px}
+@media (max-width:760px){.uses{grid-template-columns:1fr 1fr}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:36px}
+.step{border-radius:24px;padding:28px;background:var(--surface);border:1px solid var(--line);min-height:300px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .4s}
+.step:hover{transform:translateY(-6px)}
+.step .n{font:900 52px var(--heavy);color:var(--accent);line-height:1}
+.step h3{font:800 26px/1.1 var(--display)}
+.step p{color:var(--ink-soft);margin-top:8px;font-size:14.5px}
+.step.dk{background:linear-gradient(160deg,var(--deep-1),var(--deep-2) 55%,var(--deep-3));color:#fff;border:0}
+.step.dk .n{color:#fff}.step.dk p{color:rgba(255,255,255,.85)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.step{min-height:220px}}
+
+/* contact */
+.contact{padding-block:clamp(80px,11vw,140px) clamp(40px,6vw,60px)}
+.contact h2{font:800 clamp(56px,10vw,130px)/.9 var(--display);letter-spacing:-.05em}
+.contact h2 span{color:var(--deep-accent)}
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;max-width:820px}
+.qr{border-radius:30px;padding:30px;text-align:center;text-decoration:none;color:#fff;transition:transform .4s}
+.qr:hover{transform:translateY(-6px)}
+.qr .code{width:min(200px,100%);aspect-ratio:1;margin:0 auto;padding:14px;border-radius:20px;background:#fff}
+.qr .code img{width:100%;height:100%;image-rendering:pixelated}
+.qr small{display:block;margin-top:22px;font:700 11px var(--display);letter-spacing:.24em;opacity:.8}
+.qr b{display:block;font:800 clamp(24px,3vw,32px) var(--display);margin-top:4px}
+.qr em{display:block;font-style:normal;font-size:13px;opacity:.85;margin-top:4px;word-break:break-all}
+@media (max-width:560px){.qrs{grid-template-columns:1fr}}
+.reach{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.copy{display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.35);border-radius:40px;padding:8px 8px 8px 20px;font:600 15px var(--display)}
+.copy button{border:0;background:#fff;color:var(--deep-1);font:700 12px var(--display);padding:9px 14px;border-radius:30px;cursor:pointer}
+footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:70px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);font:600 11.5px var(--display);letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+
+/* reveal */
+.rv{transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.pre{opacity:0;transform:translateY(40px)}
+.rv.pre.l{transform:translateX(-40px)}
+.rv.pre.s{transform:scale(.94)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,10,30,.88);display:flex;align-items:center;justify-content:center;padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));opacity:0;pointer-events:none;transition:opacity .3s;cursor:zoom-out}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-height:100%;max-width:100%;border-radius:14px;transform:scale(.96);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.lb.on img{transform:none}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));border:0;background:#fff;color:#111;font:700 13px var(--display);padding:10px 16px;border-radius:30px;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv.pre{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+
+<div class="prog" id="prog"></div>
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top">S<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#branding">Branding</a><a href="#packaging">Packaging</a><a href="#thumbnails">Thumbnails</a><a href="#social">Social</a><a href="#ai">AI</a><a href="#vector">Vector</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="deep hero" id="top">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="wrap" style="position:relative">
+    <div class="hero-top"><span class="lab">Portfolio 2026</span><span class="lab">Lahore, Pakistan</span></div>
+    <div class="panel glass">
+      <h1 class="word" aria-label="Portfolio."><span style="animation-delay:.05s">P</span><span style="animation-delay:.1s">o</span><span style="animation-delay:.15s">r</span><span style="animation-delay:.2s">t</span><span style="animation-delay:.25s">f</span><span style="animation-delay:.3s">o</span><span style="animation-delay:.35s">l</span><span style="animation-delay:.4s">i</span><span style="animation-delay:.45s">o</span><span class="dot" style="animation-delay:.6s">.</span></h1>
+      <p class="hero-sub">Shehroz Ahmad, Graphic Designer</p>
+      <div class="hero-cta"><a class="btn solid" href="#branding">See the work</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="marq-in">
+  <span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>Social media <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
+  <span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>Social media <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
+</div></div>
+
+<main>
+<!-- ABOUT -->
+<section class="page" id="about">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <span class="lab">About</span>
+    <h2 class="h2">About<span style="color:var(--accent)">.</span></h2>
+    <div class="about">
+      <div class="photo rv l" id="photo"><div class="card"></div><div class="clip"><img src="assets/me.png" alt="Shehroz Ahmad in a black suit, arms crossed" loading="eager"></div></div>
+      <div class="rv">
+        <div class="iam">I'm</div>
+        <div class="name">Shehroz<br><span>Ahmad</span></div>
+        <p class="lede">A graphic designer who builds the full visual side of a brand. Branding, packaging, social media and vector art that look premium and are made to be used, from the first idea to a clean final file.</p>
+        <div class="cv">
+          <div><b>Work</b><span>Graphic Designer, Digital Vision Tech Freelance Agency<br>Vector Contributor, Adobe Stock and Shutterstock</span></div>
+          <div><b>Study</b><span>ADP Computer Science, Superior College Depalpur (GCUF), 2024 to 2026<br>Intermediate, Aspire College Basirpur, 2022 to 2024</span></div>
+          <div><b>Software</b><span class="chips"><span>Illustrator</span><span>Photoshop</span><span>Canva</span><span>CapCut</span></span></div>
+          <div><b>AI tools</b><span class="chips"><span>Leonardo AI</span><span>Recraft</span><span>ChatGPT</span><span>Claude</span></span></div>
+          <div><b>Languages</b><span>English, Urdu, Punjabi</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="page" style="padding-top:0">
+  <div class="wrap">
+    <span class="lab">Services</span>
+    <h2 class="h2">What <em>I do</em></h2>
+    <div class="bento">
+      <div class="tile big rv s"><span class="n">01</span>
+        <svg viewBox="0 0 48 48" fill="currentColor"><g transform="rotate(45 24 24)"><path fill-rule="evenodd" d="M24 46.5 L14.2 27.4 C13.2 25.5 13.3 23.2 14.5 21.4 L17.6 16.6 H30.4 L33.5 21.4 C34.7 23.2 34.8 25.5 33.8 27.4 Z M24 22.4 a3.4 3.4 0 1 0 0.01 0Z M23.3 29 H24.7 V44.2 H23.3 Z"/><rect x="16.2" y="9.6" width="15.6" height="5" rx="1.8"/><rect x="18.4" y="2" width="11.2" height="5.6" rx="1.6" opacity=".7"/></g></svg>
+        <h3>Logos and identity</h3><p>Wordmarks, symbols and full brand systems built around one clear idea.</p></div>
+      <div class="tile t-a rv s"><span class="n">02</span>
+        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 3 L43 13.5 L24 24 L5 13.5Z"/><path d="M5 16.5 L22.5 26.2 V45 L5 35.3Z" opacity=".6"/><path d="M25.5 26.2 L43 16.5 V35.3 L25.5 45Z" opacity=".8"/></svg>
+        <h3>Packaging</h3><p>Boxes, labels and print ready dielines.</p></div>
+      <div class="tile t-b rv s"><span class="n">03</span>
+        <svg viewBox="0 0 48 48" fill="currentColor"><path fill-rule="evenodd" d="M18 3h12a6 6 0 0 1 6 6v30a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V9a6 6 0 0 1 6-6Z M16 10v27h16V10Z"/><path opacity=".7" d="M24 31 C18 27 16.8 22.8 19.2 20.6 C21.2 18.8 23.3 19.6 24 21.3 C24.7 19.6 26.8 18.8 28.8 20.6 C31.2 22.8 30 27 24 31 Z"/></svg>
+        <h3>Social media</h3><p>Campaigns, ads and thumbnails that stop the scroll.</p></div>
+      <div class="tile t-c rv s"><span class="n">04</span>
+        <svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="24" r="8"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M38 10l-6 6M16 32l-6 6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+        <h3>AI creatives</h3><p>Concepts taken from prompt to polished visual.</p></div>
+      <div class="tile t-d rv s"><span class="n">05</span>
+        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M9 38 C15 14 33 34 39 10" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="3.5" y="32.5" width="11" height="11" rx="2.5"/><rect x="33.5" y="4.5" width="11" height="11" rx="2.5"/><circle cx="19" cy="15" r="3.8" opacity=".75"/><circle cx="29" cy="33" r="3.8" opacity=".75"/></svg>
+        <h3>Vector art</h3><p>Seamless patterns and illustrations sold on Adobe Stock and Shutterstock.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 BRANDING -->
+<section class="deep opener" id="branding">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">01</div>
+    <div class="panel glass rv s"><div class="big">BRANDING</div><div class="tags"><span>LOGOS</span><span>IDENTITY</span><span>APP ICONS</span><span>MOCKUPS</span></div></div>
+    <p class="desc rv">Logos and brand identities built around one clear idea, with colours, type and every version a brand needs.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">01 Branding</span><h3 style="margin-top:12px">Logofolio <span style="font-weight:300">2026</span></h3><p class="sub">Seven wordmarks, seven small ideas</p></div><div class="count">01<small> / 02</small></div></div>
+      <div class="logos">
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_orbi.webp" alt="Orbi logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_swello.webp" alt="Swello logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_nestly.webp" alt="Nestly logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_velour.webp" alt="Velour logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_lumo.webp" alt="Lumo logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/logo_fitora.webp" alt="Fitora logo" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0;grid-column:1/-1;aspect-ratio:21/8"><img src="assets/logo_verdi.webp" alt="Verdi logo" loading="lazy"></figure>
+      </div>
+      <figure class="fig contain wide rv" style="margin-top:14px;background:transparent"><img src="assets/logo_mockups.webp" alt="Logos on business cards, tote bag, staff badge and shopping bag" loading="lazy"></figure>
+      <p class="lede rv">A good logo has to work small on a card, big on a bag and clear on a badge. Every logo here is one clean vector in one or two colours.</p>
+    </article>
+
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">01 Branding</span><h3 style="margin-top:12px">Roso</h3><p class="sub">Skin Atelier brand identity</p></div><div class="count">02<small> / 02</small></div></div>
+      <figure class="fig hero-img rv s" style="margin-top:26px"><img src="assets/roso_1.webp" alt="Roso brand identity cover" loading="lazy"></figure>
+      <div class="bi">
+        <div class="rv"><span class="lab">The brief</span><p>A new skincare brand wanted an identity that feels like quiet luxury. Soft, calm and modern, never loud.</p></div>
+        <div class="rv"><span class="lab">The idea</span><p>One letter, one rose. The final O turns into a rose drawn as a single spiral, so the name and the symbol are the same thing.</p></div>
+      </div>
+      <div class="swatch rv"><span style="background:#F6EEEA"></span><span style="background:#EBCFC8"></span><span style="background:#C9867E"></span><span style="background:#7A2A3A"></span><span style="background:#5A1E2A"></span><span style="background:#2E1016"></span></div>
+      <figure class="fig rv s" style="margin-top:14px"><img src="assets/roso_2.webp" alt="Roso logo construction and versions" loading="lazy"></figure>
+      <div class="duo"><figure class="fig rv s" style="margin:0"><img src="assets/roso_3.webp" alt="Roso brand detail" loading="lazy"></figure><figure class="fig rv s" style="margin:0"><img src="assets/roso_4.webp" alt="Roso brand colours" loading="lazy"></figure></div>
+    </article>
+  </div>
+</section>
+
+<!-- 02 PACKAGING -->
+<section class="deep opener" id="packaging">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">02</div>
+    <div class="panel glass rv s"><div class="big">PACKAGING</div><div class="tags"><span>BOXES</span><span>LABELS</span><span>DIELINES</span><span>MOCKUPS</span></div></div>
+    <p class="desc rv">Four packaging projects, each shown with mockups, the full print dieline and the thinking behind it.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap" id="pkgList"></div>
+</section>
+
+<!-- 03 THUMBNAILS -->
+<section class="deep opener" id="thumbnails">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">03</div>
+    <div class="panel glass rv s"><div class="big">THUMBNAILS</div><div class="tags"><span>FIVERR GIGS</span><span>YOUTUBE</span><span>BANNERS</span></div></div>
+    <p class="desc rv">Thumbnails made to win the click in one second. One bold word, one clear face or screen, one strong colour.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">03 Thumbnails</span><h3 style="margin-top:12px">Full Stack Website</h3><p class="sub">Fiverr gig thumbnail, handmade in Photoshop</p></div></div>
+      <figure class="fig hero-img rv s" style="aspect-ratio:1280/769"><img src="assets/th_fullstack.webp" alt="Full Stack Website gig thumbnail" loading="lazy"></figure>
+      <div class="bi">
+        <div class="rv"><span class="lab">The brief</span><p>A web developer needed a gig thumbnail that sells a full stack website service in one look, next to hundreds of other gigs.</p></div>
+        <div class="rv"><span class="lab">The idea</span><p>One huge word, WEBSITE, glowing in purple, with real website screens on three devices underneath. Buyers see finished work, not a promise.</p></div>
+      </div>
+      <figure class="fig contain rv" style="margin-top:28px;background:transparent"><img src="assets/th_browser.webp" alt="Thumbnail shown inside gig search results" loading="lazy"></figure>
+      <div class="thumbs">
+        <figure class="fig rv s" style="margin:0"><img src="assets/th_dropship.webp" alt="Dropshipping YouTube thumbnail" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/th_uiux.webp" alt="UI UX gig thumbnail" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/th_fiverr.webp" alt="Fiverr gig image thumbnail" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/th_shopify.webp" alt="Shopify SEO thumbnail" loading="lazy"></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 04 SOCIAL -->
+<section class="deep opener" id="social">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">04</div>
+    <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">SOCIAL MEDIA</div><div class="tags"><span>CAMPAIGNS</span><span>ADS</span><span>POSTS</span><span>STORIES</span></div></div>
+    <p class="desc rv">Campaigns and single posts for agencies, brands and pages, each one built to stop the scroll.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <div class="phead rv"><div><span class="lab">04 Social media</span><h3 style="margin-top:12px">Campaigns</h3><p class="sub">Shown the way they live in the feed</p></div></div>
+    <div class="panels">
+      <div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/bl_panel.webp" alt="Brightloop campaign on an Instagram profile and feed" loading="lazy"></figure><div class="cap"><b>Brightloop</b><span class="muted">9 post agency campaign</span></div></div>
+      <div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/pet_panel.webp" alt="Paws and Home pet care campaign in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Paws and Home</b><span class="muted">Pet care campaign</span></div></div>
+    </div>
+    <div class="single rv"><figure class="fig contain" style="margin:0"><img src="assets/ads_panel.webp" alt="Twelve ads and posts in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Ads and posts</b><span class="muted">Events, study abroad, food, drinks and Children's Day</span></div></div>
+  </div>
+</section>
+
+<!-- 05 AI -->
+<section class="deep opener" id="ai">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">05</div>
+    <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">AI CREATIVES</div><div class="tags"><span>CONCEPT</span><span>PROMPTS</span><span>AI RENDERS</span><span>PHOTOSHOP</span></div></div>
+    <p class="desc rv">Product ideas taken from a prompt to a finished visual. AI for the scene, my eye for the concept, type and final polish.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">05 AI creatives</span><h3 style="margin-top:12px">Meowlish</h3><p class="sub">Cat food packaging concept</p></div><div class="count">01<small> / 02</small></div></div>
+      <div class="mw">
+        <figure class="fig rv s" style="margin:0"><img src="assets/mw_1.webp" alt="Three Meowlish pouches" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/mw_2.webp" alt="Meowlish pouch with a cat" loading="lazy"></figure>
+        <figure class="fig rv s" style="margin:0"><img src="assets/mw_3.webp" alt="Meowlish close up" loading="lazy"></figure>
+      </div>
+      <div class="bi">
+        <div class="rv"><span class="lab">The brief</span><p>A cat food brand concept: a pouch that feels happy and healthy, and is easy to spot on a busy pet shop shelf.</p></div>
+        <div class="rv"><span class="lab">The idea</span><p>Purple and sunny yellow waves around a real looking cat, with a playful wordmark where the M wears cat ears.</p></div>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">05 AI creatives</span><h3 style="margin-top:12px">Niksmoda</h3><p class="sub">Jewellery campaign, 8 posts</p></div><div class="count">02<small> / 02</small></div></div>
+      <div class="rail" id="rail">
+        <figure class="fig" style="margin:0"><img src="assets/nk_2.webp" alt="Niksmoda Grace" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_1.webp" alt="Niksmoda More Than Time" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_3.webp" alt="Niksmoda post" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_4.webp" alt="Niksmoda post" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_5.webp" alt="Niksmoda post" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_6.webp" alt="Niksmoda post" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_7.webp" alt="Niksmoda post" loading="lazy"></figure>
+        <figure class="fig" style="margin:0"><img src="assets/nk_8.webp" alt="Niksmoda post" loading="lazy"></figure>
+      </div>
+      <p class="hint">Swipe or drag to see all eight</p>
+      <div class="bi">
+        <div class="rv"><span class="lab">The brief</span><p>A jewellery and watch brand needed a signature collection campaign that feels luxury, warm and natural.</p></div>
+        <div class="rv"><span class="lab">The idea</span><p>Every piece sits on raw bark, moss and silk in warm forest light, with an elegant serif headline, so all eight posts read as one collection.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 06 VECTOR -->
+<section class="deep opener" id="vector">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">06</div>
+    <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">VECTOR ART</div><div class="tags"><span>SEAMLESS PATTERNS</span><span>COLOURWAYS</span><span>MOCKUPS</span></div></div>
+    <p class="desc rv">Seamless vector patterns I make in Illustrator for stock sites and Etsy. Clean single paths that tile perfectly at any size.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <div class="phead rv"><div><span class="lab">06 Vector art</span><h3 style="margin-top:12px">Seamless Patterns</h3><p class="sub">Ten patterns, ten colourways. Hover to zoom out the repeat.</p></div></div>
+    <div class="pats" id="pats"></div>
+    <div class="uses rv" id="uses"></div>
+    <figure class="fig contain rv" style="margin-top:40px;background:transparent"><img src="assets/pat_mockups.webp" alt="Patterns on a tote bag, phone case, gift box and cushion" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="page" id="process">
+  <div class="wrap">
+    <span class="lab">Process</span>
+    <h2 class="h2">How <em>I work</em></h2>
+    <div class="steps">
+      <div class="step rv s"><div class="n">01</div><div><h3>Brief</h3><p>I listen first. Product, audience, shelf and budget, so the design solves the right problem.</p></div></div>
+      <div class="step rv s"><div class="n">02</div><div><h3>Ideas</h3><p>Sketches, moodboards and quick AI explorations to find a direction that is different.</p></div></div>
+      <div class="step rv s"><div class="n">03</div><div><h3>Design</h3><p>Type, colour and illustration refined until every detail feels premium.</p></div></div>
+      <div class="step dk rv s"><div class="n">04</div><div><h3>Print ready</h3><p>Dieline, CMYK colours, bleed and mockups, so the printer gets a file with no surprises.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CONTACT -->
+<footer class="deep contact" id="contact">
+  <div class="orb o1" style="width:520px;height:520px;right:-140px;top:-120px;background:#8F8BFF;opacity:.45"></div>
+  <div class="wrap" style="position:relative">
+    <span class="lab">Thank you</span>
+    <h2 style="margin-top:16px" class="rv">See more<br>of my work<span>.</span></h2>
+    <p class="lede rv" style="color:rgba(255,255,255,.85)">Full case studies on Behance and my stock collection on Adobe Stock. Scan with your phone camera or tap a card.</p>
+    <div class="qrs">
+      <a class="qr glass rv s" href="https://www.behance.net/shehrozahmad8" target="_blank" rel="noopener"><div class="code"><img src="assets/qr_behance.png" alt="QR code for Behance"></div><small>SCAN TO VIEW</small><b>Behance</b><em>behance.net/shehrozahmad8</em></a>
+      <a class="qr glass rv s" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener"><div class="code"><img src="assets/qr_adobe.png" alt="QR code for Adobe Stock"></div><small>SCAN TO VIEW</small><b>Adobe Stock</b><em>Graphics Bazaar on Adobe Stock</em></a>
+    </div>
+    <div class="reach">
+      <div class="copy"><span id="em">shehrozahmad1055@gmail.com</span><button type="button" data-copy="em">Copy</button></div>
+      <div class="copy"><span id="ph">+92 326 2942760</span><button type="button" data-copy="ph">Copy</button></div>
+    </div>
+    <div class="foot"><span>Shehroz Ahmad, Graphic Designer</span><span>Portfolio 2026</span></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><button type="button" id="lbClose">Close</button><img id="lbImg" alt=""></div>
+
+<script>
+// packaging projects
+const PKG=[
+ {k:"sol",n:"Solène",s:"Vitamin C Serum Box",b:"A vitamin C serum brand wanted a box that feels warm and premium, not cold and clinical like most skincare on the shelf.",i:"Vitamin C is sunlight, so the front became a golden hour sunset framed in an arch. Soft gradients, a classic serif and lots of calm space.",p:["FBF3E8","F2B98E","D9784A","B5532E","7E3219","3B241B"],box:"Tuck end serum carton"},
+ {k:"ro",n:"Roso",s:"Rose Velvet Cream",b:"A rose face cream needed packaging that feels soft and romantic, but still modern enough for a young audience.",i:"A clean wordmark with a rose spiral in the O, an opening rose drawn as one continuous line on the back, and a deep burgundy band that holds all the details.",p:["F6EEEA","EBCFC8","C9867E","7A2A3A","5A1E2A","2E1016"],box:"Square cream box"},
+ {k:"ny",n:"Nyra",s:"Hydrating Skincare Box",b:"A hydrating skincare line wanted one bold idea that stands out on a busy shelf and is easy to remember.",i:"A cool blue gradient like clear water, with the name set huge and vertical so it reads from across the store. Nothing extra, just colour and type.",p:["F2F6FC","C9DAF2","8FB0E3","5B83C9","2B4E8C","1C2A4A"],box:"Tall tuck end box"},
+ {k:"dd",n:"Day & Dusk",s:"Morning and Night Cream",b:"One brand, two products. A morning cream and a night cream that must look like one family but never get mixed up.",i:"Two gradients, one for sunrise and one for dusk, joined by a large ampersand. The same layout on both boxes, with a different mood on each.",p:["F3E6D6","E4A85A","C98E7E","8A6A6E","1F4A55","12303A"],box:"Two tube boxes"}];
+const esc=s=>s.replace(/&/g,"&amp;");
+document.getElementById("pkgList").innerHTML=PKG.map((d,i)=>`
+<article class="proj">
+  <div class="phead rv"><div><span class="lab">02 Packaging</span><h3 style="margin-top:12px">${esc(d.n)}</h3><p class="sub">${d.s}</p></div><div class="count">0${i+1}<small> / 04</small></div></div>
+  <figure class="fig hero-img rv s"><img src="assets/${d.k}_hero.webp" alt="${esc(d.n)} packaging mockup" loading="lazy"></figure>
+  <div class="bi"><div class="rv"><span class="lab">The brief</span><p>${d.b}</p></div><div class="rv"><span class="lab">The idea</span><p>${d.i}</p></div></div>
+  <div class="swatch rv">${d.p.map(h=>`<span style="background:#${h}" title="#${h}"></span>`).join("")}</div>
+  <div class="row3">
+    <figure class="fig rv s" style="margin:0"><img src="assets/${d.k}_a.webp" alt="${esc(d.n)} mockup" loading="lazy"></figure>
+    <figure class="fig rv s" style="margin:0"><img src="assets/${d.k}_b.webp" alt="${esc(d.n)} mockup" loading="lazy"></figure>
+    <figure class="fig contain rv s" style="margin:0;background:#fff"><img src="assets/${d.k}_die.webp" alt="${esc(d.n)} print dieline" loading="lazy"></figure>
+  </div>
+  <div class="meta rv"><span><b>Box</b>${d.box}</span><span><b>Print</b>CMYK, print ready dieline</span><span><b>Delivered</b>Artwork, dieline, mockups</span></div>
+</article>`).join("");
+
+// patterns
+const PN=["Star Diamond","Quatrefoil","Bloom Star","Clover Arrow","Cube Bloom","Tulip Cross","Honeycomb Flower","Pinwheel","Petal Lattice","Asanoha Line"];
+document.getElementById("pats").innerHTML=PN.map((n,i)=>`<div class="pat rv s" style="background-image:url(assets/pat_${i+1}.webp);transition-delay:${(i%5)*60}ms" role="img" aria-label="${n} pattern"><span>${n}</span></div>`).join("");
+const USES=["Wrapping paper and gift boxes","Fabric and textile prints","Wallpaper and wall decals","Laser cut and CNC screens","Tiles and flooring","Stationery covers","Packaging backgrounds","Web and social backgrounds"];
+document.getElementById("uses").innerHTML=USES.map((u,i)=>`<span><i>0${i+1}</i>${u}</span>`).join("");
+
+// reveal (content stays visible at rest; only items below the fold animate in)
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduce&&"IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8% 0px",threshold:.08});
+  document.querySelectorAll(".rv").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight*0.95){el.classList.add("pre");io.observe(el)}});
+}
+
+// progress, active nav, photo parallax
+const prog=document.getElementById("prog"),photo=document.querySelector("#photo img");
+const navLinks=[...document.querySelectorAll("#links a")];
+const secs=navLinks.map(a=>document.querySelector(a.getAttribute("href")));
+let tick=false;
+function onScroll(){
+  const h=document.documentElement; const p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+  prog.style.transform=`scaleX(${p})`;
+  let cur=-1; secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});
+  navLinks.forEach((a,i)=>a.classList.toggle("on",i===cur));
+  if(photo&&!reduce){const r=photo.parentElement.getBoundingClientRect();const c=(r.top+r.height/2-innerHeight/2)/innerHeight;photo.style.setProperty("--py",`${Math.max(-1,Math.min(1,c))*-18}px`)}
+  tick=false;
+}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+onScroll();
+
+// mobile menu
+const mb=document.getElementById("menuBtn"),links=document.getElementById("links");
+mb.addEventListener("click",()=>{const o=links.classList.toggle("open");mb.setAttribute("aria-expanded",o);mb.textContent=o?"Close":"Menu"});
+navLinks.forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");mb.setAttribute("aria-expanded","false");mb.textContent="Menu"}));
+
+// drag to scroll rail
+const rail=document.getElementById("rail");let dn=false,sx=0,sl=0,moved=false;
+rail.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse")return;dn=true;moved=false;sx=e.clientX;sl=rail.scrollLeft;rail.style.scrollSnapType="none"});
+addEventListener("pointermove",e=>{if(!dn)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;rail.scrollLeft=sl-dx});
+addEventListener("pointerup",()=>{if(dn){dn=false;rail.style.scrollSnapType=""}});
+
+// lightbox
+const lb=document.getElementById("lb"),lbImg=document.getElementById("lbImg");
+document.addEventListener("click",e=>{
+  const f=e.target.closest(".fig"); if(!f)return;
+  if(f.parentElement===rail&&moved){moved=false;return}
+  const im=f.querySelector("img"); lbImg.src=im.src; lbImg.alt=im.alt; lb.classList.add("on"); document.getElementById("lbClose").focus();
+});
+function closeLb(){lb.classList.remove("on")}
+lb.addEventListener("click",closeLb);
+addEventListener("keydown",e=>{if(e.key==="Escape")closeLb()});
+
+// copy
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{
+  const el=document.getElementById(b.dataset.copy);const t=el.textContent;
+  const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1600)};
+  try{navigator.clipboard.writeText(t).then(done,()=>sel(el))}catch(_){sel(el)}
+}));
+function sel(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+</script>
+
+</body>
+</html>
