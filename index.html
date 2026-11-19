@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Shehroz Ahmad, graphic designer in Lahore. Branding, packaging, thumbnails, social media, AI creatives and vector art.">
+<meta name="description" content="Shehroz Ahmad, graphic designer in Lahore. Social media, event campaigns, branding, packaging, thumbnails, AI creatives and vector art.">
 <title>Shehroz Ahmad Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -318,6 +318,21 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv.pre{opacity:1;transform:none}
 }
+
+/* event campaigns */
+.hero-banner{margin-top:28px!important;border-radius:18px;box-shadow:0 30px 60px rgba(20,25,80,.25)}
+.hero-banner img,.g2 .fig img{height:auto;display:block}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.g2 .fig{border-radius:16px;box-shadow:0 18px 36px rgba(20,25,80,.18)}
+.sublab{margin-top:56px}
+.badges{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:16px;padding:30px;border-radius:28px;background:linear-gradient(160deg,#FFFFFF,#E9ECF6)}
+.badges img{width:100%;filter:drop-shadow(0 12px 18px rgba(10,20,60,.16))}
+.coupons{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:16px;padding:36px;border-radius:28px;background:linear-gradient(160deg,#E4E7F0,#D9DDE9)}
+.coupons img{width:100%;filter:drop-shadow(0 16px 24px rgba(20,25,50,.24));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.coupons img:nth-child(odd){transform:rotate(-1.2deg)} .coupons img:nth-child(even){transform:rotate(1.2deg)}
+.coupons img:hover{transform:rotate(0) scale(1.03)}
+@media (max-width:760px){.badges{grid-template-columns:repeat(3,minmax(0,1fr));padding:20px;gap:14px}.coupons{grid-template-columns:1fr;padding:22px;gap:22px}.sublab{margin-top:40px}}
+@media (max-width:560px){.g2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -329,7 +344,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
     <a class="mark" href="#top">S<span>.</span></a>
     <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
     <div class="links" id="links">
-      <a href="#about">About</a><a href="#branding">Branding</a><a href="#packaging">Packaging</a><a href="#thumbnails">Thumbnails</a><a href="#social">Social</a><a href="#ai">AI</a><a href="#vector">Vector</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#social">Social</a><a href="#events">Events</a><a href="#branding">Branding</a><a href="#packaging">Packaging</a><a href="#thumbnails">Thumbnails</a><a href="#ai">AI</a><a href="#vector">Vector</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -341,14 +356,14 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
     <div class="panel glass">
       <h1 class="word" aria-label="Portfolio."><span style="animation-delay:.05s">P</span><span style="animation-delay:.1s">o</span><span style="animation-delay:.15s">r</span><span style="animation-delay:.2s">t</span><span style="animation-delay:.25s">f</span><span style="animation-delay:.3s">o</span><span style="animation-delay:.35s">l</span><span style="animation-delay:.4s">i</span><span style="animation-delay:.45s">o</span><span class="dot" style="animation-delay:.6s">.</span></h1>
       <p class="hero-sub">Shehroz Ahmad, Graphic Designer</p>
-      <div class="hero-cta"><a class="btn solid" href="#branding">See the work</a><a class="btn wa" href="https://wa.me/923262942760?text=Hi%20Shehroz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 1.9 1.4 3.9 3.3 5.2 1 .7 2 .9 2.6.9l.9-1.3-1.7-1-.9.7c-.8-.4-1.7-1.3-2.1-2.1l.7-.9-1-1.7-1.3.9z" fill="currentColor" stroke="none"/></svg>WhatsApp me</a><a class="btn ghost" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener">Adobe Stock</a></div>
+      <div class="hero-cta"><a class="btn solid" href="#social">See the work</a><a class="btn wa" href="https://wa.me/923262942760?text=Hi%20Shehroz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 1.9 1.4 3.9 3.3 5.2 1 .7 2 .9 2.6.9l.9-1.3-1.7-1-.9.7c-.8-.4-1.7-1.3-2.1-2.1l.7-.9-1-1.7-1.3.9z" fill="currentColor" stroke="none"/></svg>WhatsApp me</a><a class="btn ghost" href="https://stock.adobe.com/contributor/212438572/graphics-bazaar" target="_blank" rel="noopener">Adobe Stock</a></div>
     </div>
   </div>
 </header>
 
 <div class="marq" aria-hidden="true"><div class="marq-in">
-  <span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>Social media <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
-  <span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>Social media <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
+  <span>Social media <i>✦</i></span><span>Event campaigns <i>✦</i></span><span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
+  <span>Social media <i>✦</i></span><span>Event campaigns <i>✦</i></span><span>Branding <i>✦</i></span><span>Packaging <i>✦</i></span><span>Thumbnails <i>✦</i></span><span>AI creatives <i>✦</i></span><span>Vector art <i>✦</i></span>
 </div></div>
 
 <main>
@@ -401,11 +416,73 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   </div>
 </section>
 
-<!-- 01 BRANDING -->
-<section class="deep opener" id="branding">
+<section class="deep opener" id="social">
   <div class="orb o1"></div>
   <div class="wrap" style="position:relative">
     <div class="num rv">01</div>
+    <div class="panel glass rv s"><div class="big" style="font-size:clamp(30px,7.4vw,104px)">SOCIAL MEDIA</div><div class="tags"><span>CAMPAIGNS</span><span>ADS</span><span>POSTS</span><span>STORIES</span></div></div>
+    <p class="desc rv">Campaigns and single posts for agencies, brands and pages, each one built to stop the scroll.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">01 Social media</span><h3 style="margin-top:12px">Paws and Home</h3><p class="sub">Pet care campaign in Instagram feed mockups</p></div></div>
+      <div class="single rv" style="max-width:none"><figure class="fig contain" style="margin:0"><img src="assets/pet_panel.webp" alt="Paws and Home pet care campaign in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Warm, playful and made to be saved</b><span class="muted">Five posts, one violet and cream system</span></div></div>
+    </article>
+    <article class="proj" style="margin-top:80px">
+      <div class="phead rv"><div><span class="lab">01 Social media</span><h3 style="margin-top:12px">Taco Pop</h3><p class="sub">Street food brand and a nine post launch feed</p></div></div>
+      <div class="bi">
+        <div class="rv"><span class="lab">The brief</span><p>A new street taco spot needed a launch feed that feels loud, warm and impossible to scroll past.</p></div>
+        <div class="rv"><span class="lab">The idea</span><p>One bubbly look with orange and teal, cream backgrounds, hand drawn doodles and big food shots. Reveal the brand, open the doors, show the menu, then close with an offer.</p></div>
+      </div>
+      <div class="panels"><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/tp_brand.webp" alt="Taco Pop brand page with logo, colours and highlight posts" loading="lazy"></figure><div class="cap"><b>Brand</b><span class="muted">Logo, colours and highlights</span></div></div><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/tp_profile.webp" alt="Taco Pop Instagram profile with the nine post grid" loading="lazy"></figure><div class="cap"><b>Instagram profile</b><span class="muted">Posting order, one to nine</span></div></div></div>
+      <div class="panels"><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/tp_posts1.webp" alt="Taco Pop posts one to six in Instagram phones" loading="lazy"></figure><div class="cap"><b>Posts one to six</b><span class="muted">Brand reveal, opening day, menu</span></div></div><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/tp_posts2.webp" alt="Taco Pop posts seven to nine and Instagram stories" loading="lazy"></figure><div class="cap"><b>Posts and stories</b><span class="muted">Sides, spicy menu and launch deal</span></div></div></div>
+    </article>
+    <article class="proj" style="margin-top:80px">
+      <div class="phead rv"><div><span class="lab">01 Social media</span><h3 style="margin-top:12px">Campaigns and ads</h3><p class="sub">Brightloop campaign and posts for brands, events and pages</p></div></div>
+      <div class="panels"><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/bl_panel.webp" alt="Brightloop campaign on an Instagram profile and feed" loading="lazy"></figure><div class="cap"><b>Brightloop</b><span class="muted">9 post agency campaign</span></div></div><div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/ads_panel.webp" alt="Twelve ads and posts in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Ads and posts</b><span class="muted">Events, study abroad, food and Children's Day</span></div></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="deep opener" id="events">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">02</div>
+    <div class="panel glass rv s"><div class="big" style="font-size:clamp(30px,7.4vw,104px)">EVENT CAMPAIGNS</div><div class="tags"><span>BANNERS</span><span>SOCIAL</span><span>NOTICES</span><span>PRINT</span></div></div>
+    <p class="desc rv">Complete holiday campaign kits made in Illustrator. Banners, social posts, closure notices, badges and coupons, all vector and ready to print.</p>
+  </div>
+</section>
+<section class="page">
+  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
+  <div class="wrap">
+    <article class="proj">
+      <div class="phead rv"><div><span class="lab">02 Event campaigns</span><h3 style="margin-top:12px">MLK Day</h3><p class="sub">Holiday campaign kit, website to print</p></div></div>
+      <figure class="fig contain rv s hero-banner" style="margin:0"><img src="assets/mlk_typo2.webp" alt="MLK Day website hero banner, the time is always right to do what is right" loading="lazy"></figure>
+      <div class="g2"><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_typo0.webp" alt="MLK Day banner, dark edition" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_typo3.webp" alt="MLK Day banner, red edition" loading="lazy"></figure></div>
+      <div class="bi">
+        <div class="rv"><span class="lab">The kit</span><p>One bold type system that works everywhere a business needs it on the day: website, social feed, emails, store doors and the event itself.</p></div>
+        <div class="rv"><span class="lab">Made for print</span><p>Every piece is vector in Illustrator with editable text, CMYK colours and AI, EPS and PDF files.</p></div>
+      </div>
+      <div class="lab sublab rv">Social posts</div>
+      <div class="single rv" style="max-width:none;margin-top:16px"><figure class="fig contain" style="margin:0"><img src="assets/mlk_social.webp" alt="Six MLK Day posts in Instagram phone mockups" loading="lazy"></figure></div>
+      <div class="lab sublab rv">Holiday closure notices</div>
+      <div class="g2"><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed0.webp" alt="MLK Day closure notice" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed1.webp" alt="MLK Day closure notice" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed2.webp" alt="MLK Day closure notice" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed3.webp" alt="MLK Day closure notice" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed4.webp" alt="MLK Day closure notice" loading="lazy"></figure><figure class="fig contain rv s" style="margin:0;background:transparent"><img src="assets/mlk_closed5.webp" alt="MLK Day closure notice" loading="lazy"></figure></div>
+      <div class="lab sublab rv">Event badges</div>
+      <div class="badges rv"><img src="assets/mlk_badge0.webp" alt="MLK Day event badge" loading="lazy"><img src="assets/mlk_badge1.webp" alt="MLK Day event badge" loading="lazy"><img src="assets/mlk_badge2.webp" alt="MLK Day event badge" loading="lazy"><img src="assets/mlk_badge3.webp" alt="MLK Day event badge" loading="lazy"><img src="assets/mlk_badge4.webp" alt="MLK Day event badge" loading="lazy"><img src="assets/mlk_badge5.webp" alt="MLK Day event badge" loading="lazy"></div>
+      <div class="lab sublab rv">Discount coupons</div>
+      <div class="coupons rv"><img src="assets/coupon0.webp" alt="50 percent off discount coupon" loading="lazy"><img src="assets/coupon1.webp" alt="50 percent off discount coupon" loading="lazy"><img src="assets/coupon2.webp" alt="50 percent off discount coupon" loading="lazy"><img src="assets/coupon3.webp" alt="50 percent off discount coupon" loading="lazy"></div>
+    </article>
+  </div>
+</section>
+
+<!-- 03 BRANDING -->
+<section class="deep opener" id="branding">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative">
+    <div class="num rv">03</div>
     <div class="panel glass rv s"><div class="big">BRANDING</div><div class="tags"><span>LOGOS</span><span>IDENTITY</span><span>APP ICONS</span><span>MOCKUPS</span></div></div>
     <p class="desc rv">Logos and brand identities built around one clear idea, with colours, type and every version a brand needs.</p>
   </div>
@@ -414,7 +491,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
   <div class="wrap">
     <article class="proj">
-      <div class="phead rv"><div><span class="lab">01 Branding</span><h3 style="margin-top:12px">Logofolio <span style="font-weight:300">2026</span></h3><p class="sub">Seven wordmarks, seven small ideas</p></div><div class="count">01<small> / 02</small></div></div>
+      <div class="phead rv"><div><span class="lab">03 Branding</span><h3 style="margin-top:12px">Logofolio <span style="font-weight:300">2026</span></h3><p class="sub">Seven wordmarks, seven small ideas</p></div><div class="count">01<small> / 02</small></div></div>
       <div class="logos">
         <figure class="fig rv s" style="margin:0"><img src="assets/logo_orbi.webp" alt="Orbi logo" loading="lazy"></figure>
         <figure class="fig rv s" style="margin:0"><img src="assets/logo_swello.webp" alt="Swello logo" loading="lazy"></figure>
@@ -429,7 +506,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
     </article>
 
     <article class="proj">
-      <div class="phead rv"><div><span class="lab">01 Branding</span><h3 style="margin-top:12px">Roso</h3><p class="sub">Skin Atelier brand identity</p></div><div class="count">02<small> / 02</small></div></div>
+      <div class="phead rv"><div><span class="lab">03 Branding</span><h3 style="margin-top:12px">Roso</h3><p class="sub">Skin Atelier brand identity</p></div><div class="count">02<small> / 02</small></div></div>
       <figure class="fig hero-img rv s" style="margin-top:26px"><img src="assets/roso_1.webp" alt="Roso brand identity cover" loading="lazy"></figure>
       <div class="bi">
         <div class="rv"><span class="lab">The brief</span><p>A new skincare brand wanted an identity that feels like quiet luxury. Soft, calm and modern, never loud.</p></div>
@@ -442,11 +519,11 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   </div>
 </section>
 
-<!-- 02 PACKAGING -->
+<!-- 04 PACKAGING -->
 <section class="deep opener" id="packaging">
   <div class="orb o1"></div>
   <div class="wrap" style="position:relative">
-    <div class="num rv">02</div>
+    <div class="num rv">04</div>
     <div class="panel glass rv s"><div class="big">PACKAGING</div><div class="tags"><span>BOXES</span><span>LABELS</span><span>DIELINES</span><span>MOCKUPS</span></div></div>
     <p class="desc rv">Four packaging projects, each shown with mockups, the full print dieline and the thinking behind it.</p>
   </div>
@@ -456,11 +533,11 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   <div class="wrap" id="pkgList"></div>
 </section>
 
-<!-- 03 THUMBNAILS -->
+<!-- 05 THUMBNAILS -->
 <section class="deep opener" id="thumbnails">
   <div class="orb o1"></div>
   <div class="wrap" style="position:relative">
-    <div class="num rv">03</div>
+    <div class="num rv">05</div>
     <div class="panel glass rv s"><div class="big">THUMBNAILS</div><div class="tags"><span>FIVERR GIGS</span><span>YOUTUBE</span><span>BANNERS</span></div></div>
     <p class="desc rv">Thumbnails made to win the click in one second. One bold word, one clear face or screen, one strong colour.</p>
   </div>
@@ -469,7 +546,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
   <div class="wrap">
     <article class="proj">
-      <div class="phead rv"><div><span class="lab">03 Thumbnails</span><h3 style="margin-top:12px">Full Stack Website</h3><p class="sub">Fiverr gig thumbnail, handmade in Photoshop</p></div></div>
+      <div class="phead rv"><div><span class="lab">05 Thumbnails</span><h3 style="margin-top:12px">Full Stack Website</h3><p class="sub">Fiverr gig thumbnail, handmade in Photoshop</p></div></div>
       <figure class="fig hero-img rv s" style="aspect-ratio:1280/769"><img src="assets/th_fullstack.webp" alt="Full Stack Website gig thumbnail" loading="lazy"></figure>
       <div class="bi">
         <div class="rv"><span class="lab">The brief</span><p>A web developer needed a gig thumbnail that sells a full stack website service in one look, next to hundreds of other gigs.</p></div>
@@ -486,32 +563,11 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   </div>
 </section>
 
-<!-- 04 SOCIAL -->
-<section class="deep opener" id="social">
-  <div class="orb o1"></div>
-  <div class="wrap" style="position:relative">
-    <div class="num rv">04</div>
-    <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">SOCIAL MEDIA</div><div class="tags"><span>CAMPAIGNS</span><span>ADS</span><span>POSTS</span><span>STORIES</span></div></div>
-    <p class="desc rv">Campaigns and single posts for agencies, brands and pages, each one built to stop the scroll.</p>
-  </div>
-</section>
-<section class="page">
-  <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
-  <div class="wrap">
-    <div class="phead rv"><div><span class="lab">04 Social media</span><h3 style="margin-top:12px">Campaigns</h3><p class="sub">Shown the way they live in the feed</p></div></div>
-    <div class="panels">
-      <div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/bl_panel.webp" alt="Brightloop campaign on an Instagram profile and feed" loading="lazy"></figure><div class="cap"><b>Brightloop</b><span class="muted">9 post agency campaign</span></div></div>
-      <div class="rv"><figure class="fig contain" style="margin:0"><img src="assets/pet_panel.webp" alt="Paws and Home pet care campaign in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Paws and Home</b><span class="muted">Pet care campaign</span></div></div>
-    </div>
-    <div class="single rv"><figure class="fig contain" style="margin:0"><img src="assets/ads_panel.webp" alt="Twelve ads and posts in Instagram mockups" loading="lazy"></figure><div class="cap"><b>Ads and posts</b><span class="muted">Events, study abroad, food, drinks and Children's Day</span></div></div>
-  </div>
-</section>
-
-<!-- 05 AI -->
+<!-- 06 AI -->
 <section class="deep opener" id="ai">
   <div class="orb o1"></div>
   <div class="wrap" style="position:relative">
-    <div class="num rv">05</div>
+    <div class="num rv">06</div>
     <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">AI CREATIVES</div><div class="tags"><span>CONCEPT</span><span>PROMPTS</span><span>AI RENDERS</span><span>PHOTOSHOP</span></div></div>
     <p class="desc rv">Product ideas taken from a prompt to a finished visual. AI for the scene, my eye for the concept, type and final polish.</p>
   </div>
@@ -520,7 +576,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
   <div class="wrap">
     <article class="proj">
-      <div class="phead rv"><div><span class="lab">05 AI creatives</span><h3 style="margin-top:12px">Meowlish</h3><p class="sub">Cat food packaging concept</p></div><div class="count">01<small> / 02</small></div></div>
+      <div class="phead rv"><div><span class="lab">06 AI creatives</span><h3 style="margin-top:12px">Meowlish</h3><p class="sub">Cat food packaging concept</p></div><div class="count">01<small> / 02</small></div></div>
       <div class="mw">
         <figure class="fig rv s" style="margin:0"><img src="assets/mw_1.webp" alt="Three Meowlish pouches" loading="lazy"></figure>
         <figure class="fig rv s" style="margin:0"><img src="assets/mw_2.webp" alt="Meowlish pouch with a cat" loading="lazy"></figure>
@@ -532,7 +588,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
       </div>
     </article>
     <article class="proj">
-      <div class="phead rv"><div><span class="lab">05 AI creatives</span><h3 style="margin-top:12px">Niksmoda</h3><p class="sub">Jewellery campaign, 8 posts</p></div><div class="count">02<small> / 02</small></div></div>
+      <div class="phead rv"><div><span class="lab">06 AI creatives</span><h3 style="margin-top:12px">Niksmoda</h3><p class="sub">Jewellery campaign, 8 posts</p></div><div class="count">02<small> / 02</small></div></div>
       <div class="rail" id="rail">
         <figure class="fig" style="margin:0"><img src="assets/nk_2.webp" alt="Niksmoda Grace" loading="lazy"></figure>
         <figure class="fig" style="margin:0"><img src="assets/nk_1.webp" alt="Niksmoda More Than Time" loading="lazy"></figure>
@@ -552,11 +608,11 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
   </div>
 </section>
 
-<!-- 06 VECTOR -->
+<!-- 07 VECTOR -->
 <section class="deep opener" id="vector">
   <div class="orb o1"></div>
   <div class="wrap" style="position:relative">
-    <div class="num rv">06</div>
+    <div class="num rv">07</div>
     <div class="panel glass rv s"><div class="big" style="font-size:clamp(34px,8vw,104px)">VECTOR ART</div><div class="tags"><span>SEAMLESS PATTERNS</span><span>COLOURWAYS</span><span>MOCKUPS</span></div></div>
     <p class="desc rv">Seamless vector patterns I make in Illustrator for stock sites and Etsy. Clean single paths that tile perfectly at any size.</p>
   </div>
@@ -564,7 +620,7 @@ footer.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;m
 <section class="page">
   <div class="glowbg"><div class="orb a"></div><div class="orb b"></div></div>
   <div class="wrap">
-    <div class="phead rv"><div><span class="lab">06 Vector art</span><h3 style="margin-top:12px">Seamless Patterns</h3><p class="sub">Ten patterns, ten colourways. Hover to zoom out the repeat.</p></div></div>
+    <div class="phead rv"><div><span class="lab">07 Vector art</span><h3 style="margin-top:12px">Seamless Patterns</h3><p class="sub">Ten patterns, ten colourways. Hover to zoom out the repeat.</p></div></div>
     <div class="pats" id="pats"></div>
     <div class="uses rv" id="uses"></div>
     <figure class="fig contain rv" style="margin-top:40px;background:transparent"><img src="assets/pat_mockups.webp" alt="Patterns on a tote bag, phone case, gift box and cushion" loading="lazy"></figure>
@@ -633,7 +689,7 @@ const PKG=[
 const esc=s=>s.replace(/&/g,"&amp;");
 document.getElementById("pkgList").innerHTML=PKG.map((d,i)=>`
 <article class="proj">
-  <div class="phead rv"><div><span class="lab">02 Packaging</span><h3 style="margin-top:12px">${esc(d.n)}</h3><p class="sub">${d.s}</p></div><div class="count">0${i+1}<small> / 04</small></div></div>
+  <div class="phead rv"><div><span class="lab">04 Packaging</span><h3 style="margin-top:12px">${esc(d.n)}</h3><p class="sub">${d.s}</p></div><div class="count">0${i+1}<small> / 04</small></div></div>
   <figure class="fig hero-img rv s"><img src="assets/${d.k}_hero.webp" alt="${esc(d.n)} packaging mockup" loading="lazy"></figure>
   <div class="bi"><div class="rv"><span class="lab">The brief</span><p>${d.b}</p></div><div class="rv"><span class="lab">The idea</span><p>${d.i}</p></div></div>
   <div class="swatch rv">${d.p.map(h=>`<span style="background:#${h}" title="#${h}"></span>`).join("")}</div>
